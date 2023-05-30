@@ -1,17 +1,22 @@
 package com.platzi.javatests.util;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class StringUtilTest {
+    //cUANDO HACEMOS TEST NO ES NECESARIO EL MAIN
+    //public static void main(String[] args) {
+    @Test
+    public void testRepeat(){
 
-    public static void main(String[] args) {
-
-        assertEquals(StringUtil.repeat("hola", 3), "holaholahola");
-        assertEquals(StringUtil.repeat("hola", 1), "hola");
+        Assert.assertEquals("holaholahola",StringUtil.repeat("hola", 3) );
+        Assert.assertEquals("hola",StringUtil.repeat("hola", 1) );
     }
-
-    private static void assertEquals(String actual, String expected) {
+    //Borramos por que ya vienen incluidas en las librerias de Junit
+    /*private static void assertEquals(String actual, String expected) {
 
         if (!actual.equals(expected)) {
             throw new RuntimeException(actual + " is not equal to expected p" + expected);
         }
-    }
+    }*/
 }
