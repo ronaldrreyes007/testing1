@@ -1,8 +1,9 @@
 package com.platzi.javatests.util;
 
+import Util.PasswordUtil;
 import org.junit.Test;
 
-import static com.platzi.javatests.util.PasswordUtil.SecurityLevel.*;
+import static Util.PasswordUtil.SecurityLevel.*;
 import static org.junit.Assert.*;
 
 public class PasswordUtilTest {
@@ -22,5 +23,6 @@ public class PasswordUtilTest {
     @Test
     public void strong_when_has_letters_and_numbers_and_simbols() {
         assertEquals(STRONG, PasswordUtil.assessPassword("abcd123!"));
+
     }
 }
